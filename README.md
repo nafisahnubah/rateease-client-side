@@ -4,6 +4,15 @@
 -
 -
 ## npm packages used:
--
--
+- react-router-dom
+
+For react-router-dom:
+- localforage
+- match-sorter
+- sort-by
+
+- tailwindcss
+- postcss
+- autoprefixer
+- daisyui@latest
 
