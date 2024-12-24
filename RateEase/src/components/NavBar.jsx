@@ -24,17 +24,17 @@ const NavBar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-xl gap-4">
-                    <li><Link to={'/'} className="bg-[#CCC6B8]">Home</Link></li>
-                    <li><Link to={'/services'} className="bg-[#CCC6B8]">Services</Link></li>
-                    <li><Link to={'/'} className="bg-[#CCC6B8]">About</Link></li>
+                    <li><Link to={'/'}>Home</Link></li>
+                    <li><Link to={'/services'}>Services</Link></li>
+                    <li><Link to={'/about'}>About</Link></li>
                     {
-                        user && <li><Link to={'/'} className="bg-[#CCC6B8]">Add Service</Link></li>
+                        user && <li><Link to={'/'}>Add Service</Link></li>
                     }
                     {
-                        user && <li><Link to={'/'} className="bg-[#CCC6B8]">My Reviews</Link></li>
+                        user && <li><Link to={'/'}>My Reviews</Link></li>
                     }
                     {
-                        user && <li><Link to={'/'} className="bg-[#CCC6B8]">My Services</Link></li>
+                        user && <li><Link to={'/'}>My Services</Link></li>
                     }
                 </ul>
             </div>

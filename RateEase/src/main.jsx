@@ -12,6 +12,7 @@ import ServiceDetails from './pages/ServiceDetails';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import AuthProvider from './context/AuthProvider';
+import About from './pages/About';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup></Signup>
+      },
+      {
+        path: "/about",
+        element: <About></About>
       },
     ]
   },

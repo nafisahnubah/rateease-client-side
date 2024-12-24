@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import welcomeAnimation from "../assets/lottie-animations/login-signup.json";
 import { useContext, useState } from "react";
@@ -9,6 +9,7 @@ const Signup = () => {
 
     const { signupUser } = useContext(AuthContext);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     const handleSignup = e => {
         e.preventDefault();
@@ -40,7 +41,7 @@ const Signup = () => {
             setError(null);
             toast.success('Account created successfully!', {
                 position: "top-center",
-                autoClose: 3000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: false,
                 pauseOnHover: true,
@@ -49,6 +50,9 @@ const Signup = () => {
                 theme: "colored",
                 transition: Bounce,
             });
+            setTimeout(() => {
+                navigate('/');
+            }, 1500);
           })
           .catch((error) => {
             const errorCode = error.code;
@@ -92,7 +96,7 @@ const Signup = () => {
                     <button className="btn bg-[#FAD783] hover:bg-white border-none">Signup</button>
                     <ToastContainer
                         position="top-center"
-                        autoClose={3000}
+                        autoClose={1000}
                         hideProgressBar={false}
                         newestOnTop={false}
                         closeOnClick={false}
