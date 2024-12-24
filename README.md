@@ -15,4 +15,6 @@ For react-router-dom:
 - postcss
 - autoprefixer
 - daisyui@latest
-
+- lottie-react
+- firebase
+- react-toastify

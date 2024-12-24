@@ -11,6 +11,7 @@ import Services from './pages/Services';
 import ServiceDetails from './pages/ServiceDetails';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import AuthProvider from './context/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -30,20 +31,22 @@ const router = createBrowserRouter([
         path: "/service-details",
         element: <ServiceDetails></ServiceDetails>
       },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/signup",
+        element: <Signup></Signup>
+      },
     ]
-  },
-  {
-    path: "/login",
-    element: <Login></Login>
-  },
-  {
-    path: "/signup",
-    element: <Signup></Signup>
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )
