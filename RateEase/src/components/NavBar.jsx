@@ -40,13 +40,13 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user ? <button onClick={handleLogout} className="btn md:px-10 px-4 rounded-3xl bg-[#FAD783] border-none hover:bg-white">Logout</button> : 
+                    user ? <button onClick={handleLogout} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Logout</button> : 
                     <div className="flex gap-3">
                         {
                             error && <p className="text-red-500">{error}</p>
                         }
-                        <Link to={'/login'} className="btn md:px-10 px-4 rounded-3xl bg-[#FAD783] border-none hover:bg-white">Login</Link>
-                        <Link to={'/signup'} className="btn md:px-10 px-4 rounded-3xl bg-[#FAD783] border-none hover:bg-white">Signup</Link>
+                        <Link to={'/login'} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Login</Link>
+                        <Link to={'/signup'} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Signup</Link>
                     </div>
                 }  
             </div>

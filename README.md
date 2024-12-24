@@ -18,3 +18,4 @@ For react-router-dom:
 - lottie-react
 - firebase
 - react-toastify
+- motion
