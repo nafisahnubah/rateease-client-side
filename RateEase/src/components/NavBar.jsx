@@ -28,13 +28,13 @@ const NavBar = () => {
                     <li><Link to={'/services'}>Services</Link></li>
                     <li><Link to={'/about'}>About</Link></li>
                     {
-                        user && <li><Link to={'/'}>Add Service</Link></li>
+                        user && <li><Link to={'/add-service'}>Add Service</Link></li>
                     }
                     {
-                        user && <li><Link to={'/'}>My Reviews</Link></li>
+                        user && <li><Link to={'/my-reviews'}>My Reviews</Link></li>
                     }
                     {
-                        user && <li><Link to={'/'}>My Services</Link></li>
+                        user && <li><Link to={'/my-services'}>My Services</Link></li>
                     }
                 </ul>
             </div>

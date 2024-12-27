@@ -22,7 +22,7 @@ const Banner = () => {
             
             <div className="my-10" id="features">
                 <h1 className="text-5xl text-center mt-16">Get Started Today!</h1>
-                <p className="py-10 text-xl md:mx-72 text-center">RateEase allows you to easily find and review services from across various categories. Whether you're looking for a local restaurant, a reliable plumber, or the best online course, RateEase is the place where you can:</p>
+                <p className="py-10 text-xl md:mx-72 text-center">RateEase allows you to easily find and review services from across various categories. Whether you are looking for a local restaurant, a reliable plumber, or the best online course, RateEase is the place where you can:</p>
                 <div className="flex mx-24">
                     <div className="card w-96">
                         <figure className="px-10 pt-10 rounded-full">

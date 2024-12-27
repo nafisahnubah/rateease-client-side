@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import welcomeAnimation from "../assets/lottie-animations/login-signup.json";
 import { useContext, useState } from "react";
@@ -8,6 +8,9 @@ import { Bounce, ToastContainer, toast } from 'react-toastify';
 const Login = () => {
 
     const { loginUser } = useContext(AuthContext);
+    const location = useLocation();
+    const from = location.state || '/';
+
     const [error, setError] = useState(null);
     const navigate = useNavigate();
 
@@ -34,7 +37,7 @@ const Login = () => {
                 transition: Bounce,
             });
             setTimeout(() => {
-                navigate('/');
+                navigate(from);
             }, 1500);
           })
           .catch((error) => {

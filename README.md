@@ -19,3 +19,5 @@ For react-router-dom:
 - firebase
 - react-toastify
 - motion
+- @smastrom/react-rating
+- react-icons
