@@ -25,7 +25,7 @@ RateEase is a platform that allows users to review and interact with services li
 - **React Toastify**
 - **React Rating**
 
-## Live Link: 
+## Live Link: https://taupe-elf-0b4f7f.netlify.app/
 
 ## Author:
 - Name: Nafisah Nubah
