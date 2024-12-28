@@ -21,3 +21,4 @@ For react-router-dom:
 - motion
 - @smastrom/react-rating
 - react-icons
+- sweetalert2

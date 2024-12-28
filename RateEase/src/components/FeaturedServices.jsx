@@ -24,7 +24,7 @@ const FeaturedServices = () => {
                     services.map( service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
             </div>
-            <div>
+            <div className="flex justify-center mb-10">
                 <Link to={'/services'} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">View all services</Link>
             </div>
         </div>

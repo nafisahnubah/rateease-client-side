@@ -17,7 +17,7 @@ const MyServices = () => {
             <h1 className="font-semibold text-4xl text-center my-10">My Services</h1>
             <div className="md:grid grid-cols-3 gap-8 mb-4 md:px-24">
                 {
-                    services.map(elem => <MyServiceCard key={elem._id} service={elem}></MyServiceCard>)
+                    services.map(elem => <MyServiceCard key={elem._id} services={services} setServices={setServices} service={elem}></MyServiceCard>)
                 }
             </div>
         </div>

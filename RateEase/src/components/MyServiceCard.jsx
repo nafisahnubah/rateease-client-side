@@ -1,10 +1,41 @@
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const MyServiceCard = ({service}) => {
+const MyServiceCard = ({service, services, setServices}) => {
 
     const {_id, company_logo, company_name, service_name, service_category} = service;
+
+    const handleDelete = _id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/my-services/${_id}`, {
+                    method: 'DELETE'
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.deletedCount>0){
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your service has been deleted.",
+                            icon: "success"
+                        });
+                        const remaining = services.filter(serv => serv._id !== _id);
+                        setServices(remaining);
+                    }
+                })
+            }
+          });
+    }
 
     return (
         <div className="mx-auto">
@@ -21,8 +52,8 @@ const MyServiceCard = ({service}) => {
                     <div className="card-actions py-4 justify-between">
                         <Link to={`/services/${_id}`} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">View Details</Link>
                         <div className="flex gap-3">
-                            <button className="btn rounded-3xl bg-[#EDA735] border-none hover:bg-white text-xl"><MdDelete/></button>
-                            <button className="btn rounded-3xl bg-[#EDA735] border-none hover:bg-white text-xl"><FaEdit/></button>
+                            <button onClick={() => handleDelete(_id)} className="btn rounded-3xl bg-[#EDA735] border-none hover:bg-white text-xl"><MdDelete/></button>
+                            <Link to={`/my-services/${_id}`} className="btn rounded-3xl bg-[#EDA735] border-none hover:bg-white text-xl"><FaEdit/></Link>
                         </div>
                     </div>
                 </div>

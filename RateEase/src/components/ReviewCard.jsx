@@ -20,7 +20,7 @@ const ReviewCard = ({elem}) => {
                         <CgProfile className="text-xl"/>
                         <div className="badge">{email}</div>
                     </div>
-                    <div className="text-3xl">
+                    <div className="flex gap-2 text-3xl">
                     {
                         renderStars(rating)
                     }

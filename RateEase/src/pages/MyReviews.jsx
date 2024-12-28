@@ -19,7 +19,7 @@ const MyReviews = () => {
             <h1 className="font-semibold text-4xl text-center my-10">My Reviews</h1>
             <div className="gap-8 mb-4 md:px-24">
                 {
-                    reviews.map(reviewObj => <MyReviewCard key={reviewObj._id} reviewObj={reviewObj}></MyReviewCard>)
+                    reviews.map(reviewObj => <MyReviewCard key={reviewObj._id} reviews={reviews} setReviews={setReviews} reviewObj={reviewObj}></MyReviewCard>)
                 }
             </div>
         </div>
