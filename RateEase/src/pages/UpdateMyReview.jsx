@@ -33,7 +33,7 @@ const UpdateMyReview = () => {
             confirmButtonText: "Yes, update it!"
             }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/my-reviews/${_id}`, {
+                fetch(`https://rate-ease-server-side.vercel.app/my-reviews/${_id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type' : 'application/json'

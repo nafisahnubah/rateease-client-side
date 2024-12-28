@@ -37,7 +37,7 @@ const UpdateMyService = () => {
             confirmButtonText: "Yes, update it!"
             }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/my-services/${_id}`, {
+                fetch(`https://rate-ease-server-side.vercel.app/my-services/${_id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type' : 'application/json'

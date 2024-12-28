@@ -28,7 +28,7 @@ const AddService = () => {
             user_email
         }
 
-        fetch('http://localhost:5000/add-service', {
+        fetch('https://rate-ease-server-side.vercel.app/add-service', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

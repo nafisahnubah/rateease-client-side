@@ -9,7 +9,7 @@ const MyReviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/my-reviews?email=${user.email}`)
+        fetch(`https://rate-ease-server-side.vercel.app/my-reviews?email=${user.email}`)
         .then(res => res.json())
         .then(data => setReviews(data));
     }, [user.email])

@@ -26,7 +26,7 @@ const MyReviewCard = ({reviewObj, reviews, setReviews}) => {
             confirmButtonText: "Yes, delete it!"
             }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/my-reviews/${_id}`, {
+                fetch(`https://rate-ease-server-side.vercel.app/my-reviews/${_id}`, {
                     method: 'DELETE'
                 })
                 .then(res => res.json())

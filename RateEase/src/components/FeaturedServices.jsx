@@ -8,7 +8,7 @@ const FeaturedServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/featured-services')
+        fetch('https://rate-ease-server-side.vercel.app/featured-services')
         .then(res => res.json())
         .then(data => setServices(data));
     }, [])

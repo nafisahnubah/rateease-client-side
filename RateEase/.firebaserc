@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "rateease": "rate-ease",
+    "default": "rate-ease",
+    "rate-ease": "rate-ease"
+  },
+  "targets": {},
+  "etags": {}
+}

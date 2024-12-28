@@ -19,7 +19,7 @@ const ServiceDetails = () => {
     const [rating, setRating] = useState(0);
     const [reviews, setReviews] = useState([]);
 
-    fetch(`http://localhost:5000/reviews/${id}`)
+    fetch(`https://rate-ease-server-side.vercel.app/reviews/${id}`)
         .then(res => res.json())
         .then(data => setReviews(data));
 
@@ -41,7 +41,7 @@ const ServiceDetails = () => {
             service_id: id
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://rate-ease-server-side.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

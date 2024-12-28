@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/services/:id",
         element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+        loader: ({params}) => fetch(`https://rate-ease-server-side.vercel.app/services/${params.id}`)
       },
       {
         path: "/add-service",
@@ -49,12 +49,12 @@ const router = createBrowserRouter([
       {
         path: "/my-services/:id",
         element: <UpdateMyService></UpdateMyService>,
-        loader: ({params}) => fetch(`http://localhost:5000/my-services/${params.id}`)
+        loader: ({params}) => fetch(`https://rate-ease-server-side.vercel.app/my-services/${params.id}`)
       },
       {
         path: "/my-reviews/:id",
         element: <UpdateMyReview></UpdateMyReview>,
-        loader: ({params}) => fetch(`http://localhost:5000/my-reviews/${params.id}`)
+        loader: ({params}) => fetch(`https://rate-ease-server-side.vercel.app/my-reviews/${params.id}`)
       },
       {
         path: "/my-reviews",

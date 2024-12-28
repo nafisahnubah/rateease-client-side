@@ -7,7 +7,7 @@ const MyServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/my-services?email=${user.email}`)
+        fetch(`https://rate-ease-server-side.vercel.app/my-services?email=${user.email}`)
         .then(res => res.json())
         .then(data => setServices(data));
     }, [user.email])
