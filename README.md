@@ -1,24 +1,32 @@
-# RateEase client side
+# RateEase - Service Review Application System (Frontend)
 
-# Technology used:
--
--
-## npm packages used:
-- react-router-dom
+RateEase is a platform that allows users to review and interact with services listed by others. Users can log in, add services, post reviews, manage their reviews, and explore reviews of services they have added. This project represents the frontend of the Service Review Application System.
 
-For react-router-dom:
-- localforage
-- match-sorter
-- sort-by
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Live Link](#live-link)
+- [Author](#author)
 
-- tailwindcss
-- postcss
-- autoprefixer
-- daisyui@latest
-- lottie-react
-- firebase
-- react-toastify
-- motion
-- @smastrom/react-rating
-- react-icons
-- sweetalert2
+## Features
+- **User Authentication**: Users can log in and sign up to access the platform.
+- **Service Listings**: Users can browse and review various services.
+- **Add and Edit Services**: Users can add new services and manage their reviews.
+- **Review Management**: Users can update and delete reviews.
+- **Explore Reviews**: View reviews for services listed on the platform.
+- **Notifications**: Receive notifications for actions like successful login, posting a review, etc.
+
+## Tech Stack
+- **React**
+- **React Router**
+- **Tailwind CSS, DaisyUI**
+- **Firebase**
+- **Lottie**
+- **React Toastify**
+- **React Rating**
+
+## Live Link: 
+
+## Author:
+- Name: Nafisah Nubah
+- Email: nafisahnubah@gmail.com
