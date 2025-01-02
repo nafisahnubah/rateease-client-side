@@ -2,6 +2,8 @@
 
 RateEase is a platform that allows users to review and interact with services listed by others. Users can log in, add services, post reviews, manage their reviews, and explore reviews of services they have added. This project represents the frontend of the Service Review Application System.
 
+- **Backend repository**: https://github.com/nafisahnubah/rateease-server-side
+
 ## Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
