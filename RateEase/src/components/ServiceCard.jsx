@@ -6,7 +6,7 @@ const ServiceCard = ({service}) => {
 
     return (
         <div className="mx-auto">
-            <div className="card card-compact bg-base-100 h-5/6 w-96">
+            <div className="card card-compact rounded-md bg-[#eeece7] h-5/6 w-96">
                 <figure>
                     <img
                     src={company_logo}
@@ -17,7 +17,7 @@ const ServiceCard = ({service}) => {
                     <h3 className="text-2xl">{service_name}</h3>
                     <div className="badge badge-outline">{service_category}</div>
                     <div className="card-actions justify-end">
-                    <Link to={`/services/${_id}`} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">View Details</Link>
+                    <Link to={`/services/${_id}`} className="btn text-lg md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">View Details</Link>
                     </div>
                 </div>
             </div>

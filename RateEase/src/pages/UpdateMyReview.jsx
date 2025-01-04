@@ -72,7 +72,7 @@ const UpdateMyReview = () => {
                 </div>
 
                 <div className="form-control mt-6">
-                    <button className="btn bg-[#EDA735] hover:bg-white border-none">Update</button>
+                    <button className="btn text-lg bg-[#EDA735] hover:bg-white border-none">Update</button>
                 </div>
             </form>
         </div>

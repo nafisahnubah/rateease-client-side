@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer bg-[#CCC6B8] text-base-content p-10 px-20">
             <aside>
-                <img className="w-24 rounded-full" src="https://img.freepik.com/free-vector/five-star-grading-evaluation-rating-estimating-excellent-review-customer-satisfaction-with-service-highest-score-client-feedback_335657-2684.jpg?t=st=1735396764~exp=1735400364~hmac=21de6935f6014da55c8fd71dc955a2fa551e2574e14302cf61ac27c0817305a2&w=740" alt="Logo" />
+                <img className="w-24 rounded-full" src="https://thumbs.dreamstime.com/b/aabstract-elegant-modern-style-gold-star-logo-icon-black-eps-file-abstract-usable-leader-company-96357409.jpg" alt="Logo" />
                 <p className="text-2xl">
                 RateEase
                 <br />

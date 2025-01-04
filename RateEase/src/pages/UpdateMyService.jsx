@@ -61,7 +61,7 @@ const UpdateMyService = () => {
 
     return (
         <div>
-            <form onSubmit={handleUpdateService} className="md:mx-60 mx-10 my-10 p-5 border grid gap-3 border-gray-500 rounded-2xl">
+            <form onSubmit={handleUpdateService} className="md:mx-60 mx-10 my-10 p-5 border grid gap-3 border-gray-500 rounded-md">
                 <div>
                     <h1 className="font-semibold text-4xl text-center">Update Service</h1>
                 </div>
@@ -111,7 +111,7 @@ const UpdateMyService = () => {
                 </div>
 
                 <div className="form-control mt-6">
-                    <button className="btn bg-[#EDA735] hover:bg-white border-none">Update Service</button>
+                    <button className="btn text-lg bg-[#EDA735] hover:bg-white border-none">Update Service</button>
                 </div>
                 <ToastContainer
                     position="top-center"

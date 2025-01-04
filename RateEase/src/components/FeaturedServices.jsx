@@ -14,7 +14,7 @@ const FeaturedServices = () => {
     }, [])
 
     return (
-        <div>
+        <div className="mt-20">
             <div>
                 <h2 className="text-5xl text-center my-10">Featured Services</h2>
                 <p></p>
@@ -25,7 +25,7 @@ const FeaturedServices = () => {
                 }
             </div>
             <div className="flex justify-center mb-10">
-                <Link to={'/services'} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">View all services</Link>
+                <Link to={'/services'} className="btn text-lg md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">View all services</Link>
             </div>
         </div>
     );

@@ -15,7 +15,7 @@ const MyReviews = () => {
     }, [user.email])
 
     return (
-        <div>
+        <div className="pb-5">
             <h1 className="font-semibold text-4xl text-center my-10">My Reviews</h1>
             <div className="gap-8 mb-4 md:px-24">
                 {

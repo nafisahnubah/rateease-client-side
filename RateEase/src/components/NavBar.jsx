@@ -20,7 +20,7 @@ const NavBar = () => {
     return (
         <div className="navbar md:px-24 bg-[#CCC6B8]">
             <div className="navbar-start justify-start">
-                <img className="w-16 rounded-full" src="https://img.freepik.com/free-vector/five-star-grading-evaluation-rating-estimating-excellent-review-customer-satisfaction-with-service-highest-score-client-feedback_335657-2684.jpg?t=st=1735396764~exp=1735400364~hmac=21de6935f6014da55c8fd71dc955a2fa551e2574e14302cf61ac27c0817305a2&w=740" alt="Logo" />
+                <img className="w-16 rounded-full" src="https://thumbs.dreamstime.com/b/aabstract-elegant-modern-style-gold-star-logo-icon-black-eps-file-abstract-usable-leader-company-96357409.jpg" alt="Logo" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-xl gap-4">
@@ -39,13 +39,13 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user ? <button onClick={handleLogout} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Logout</button> : 
+                    user ? <button onClick={handleLogout} className="btn text-lg md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Logout</button> : 
                     <div className="flex gap-3">
                         {
                             error && <p className="text-red-500">{error}</p>
                         }
-                        <Link to={'/login'} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Login</Link>
-                        <Link to={'/signup'} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Signup</Link>
+                        <Link to={'/login'} className="btn text-lg md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Login</Link>
+                        <Link to={'/signup'} className="btn text-lg md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">Signup</Link>
                     </div>
                 }  
             </div>

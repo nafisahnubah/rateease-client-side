@@ -93,7 +93,7 @@ const Signup = () => {
                         }
                     </div>
                     <div className="form-control mt-2">
-                    <button className="btn bg-[#EDA735] hover:bg-white border-none">Signup</button>
+                    <button className="btn text-lg bg-[#EDA735] hover:bg-white border-none">Signup</button>
                     <ToastContainer
                         position="top-center"
                         autoClose={1000}

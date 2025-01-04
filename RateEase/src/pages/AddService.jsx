@@ -59,7 +59,7 @@ const AddService = () => {
 
     return (
         <div>
-            <form onSubmit={handleAddService} className="md:mx-60 mx-10 my-10 p-5 border grid gap-3 border-gray-500 rounded-2xl">
+            <form onSubmit={handleAddService} className="md:mx-60 mx-10 my-10 p-5 border grid gap-3 border-gray-500 rounded-md">
                 <div>
                     <h1 className="font-semibold text-4xl text-center">Add a Service</h1>
                 </div>
@@ -109,7 +109,7 @@ const AddService = () => {
                 </div>
 
                 <div className="form-control mt-6">
-                    <button className="btn bg-[#EDA735] hover:bg-white border-none">Add Service</button>
+                    <button className="btn text-lg bg-[#EDA735] hover:bg-white border-none">Add Service</button>
                 </div>
                 <ToastContainer
                     position="top-center"

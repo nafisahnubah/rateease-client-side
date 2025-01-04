@@ -39,7 +39,7 @@ const MyServiceCard = ({service, services, setServices}) => {
 
     return (
         <div className="mx-auto">
-            <div className="card card-compact bg-base-100 h-5/6 w-96">
+            <div className="card rounded-md card-compact bg-[#eeece7] h-5/6 w-96">
                 <figure>
                     <img
                     src={company_logo}
@@ -50,7 +50,7 @@ const MyServiceCard = ({service, services, setServices}) => {
                     <h3 className="text-2xl">{service_name}</h3>
                     <div className="badge badge-outline">{service_category}</div>
                     <div className="card-actions py-4 justify-between">
-                        <Link to={`/services/${_id}`} className="btn md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">View Details</Link>
+                        <Link to={`/services/${_id}`} className="btn text-lg md:px-10 px-4 rounded-3xl bg-[#EDA735] border-none hover:bg-white">View Details</Link>
                         <div className="flex gap-3">
                             <button onClick={() => handleDelete(_id)} className="btn rounded-3xl bg-[#EDA735] border-none hover:bg-white text-xl"><MdDelete/></button>
                             <Link to={`/my-services/${_id}`} className="btn rounded-3xl bg-[#EDA735] border-none hover:bg-white text-xl"><FaEdit/></Link>

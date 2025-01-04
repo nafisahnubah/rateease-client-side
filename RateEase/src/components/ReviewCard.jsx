@@ -14,7 +14,7 @@ const ReviewCard = ({elem}) => {
 
     return (
         <div>
-            <div className="card md:mx-32 mx-10 card-compact bg-base-100">
+            <div className="card md:mx-32 mx-10 card-compact rounded-md bg-[#eeece7]">
                 <div className="card-body grid gap-5">
                     <div className="flex gap-2 items-center">
                         <CgProfile className="text-xl"/>

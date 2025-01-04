@@ -70,7 +70,7 @@ const ServiceDetails = () => {
     return (
         <div className="mx-auto">
             <h1 className="font-semibold text-4xl text-center my-10">Service Details</h1>
-            <div className="border border-gray-500 mx-auto w-5/6">
+            <div className="border border-gray-500 mx-auto mb-10 w-5/6">
                 <div className="md:grid grid-cols-2">
                     <div className="p-10">
                         <figure className="max-w-sm">
@@ -103,7 +103,7 @@ const ServiceDetails = () => {
                             </div>
 
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#EDA735] hover:bg-white border-none">Post</button>
+                                <button className="btn text-lg bg-[#EDA735] hover:bg-white border-none">Post</button>
                             </div>
                             <ToastContainer
                                 position="top-center"

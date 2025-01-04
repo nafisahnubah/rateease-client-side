@@ -47,8 +47,8 @@ const MyReviewCard = ({reviewObj, reviews, setReviews}) => {
 
     return (
         <div>
-            <div className="card w-full mx-10 my-5 card-compact bg-base-100 md:grid grid-cols-3">
-                <figure className="md:w-1/2 mx-auto w-3/4 col-span-1">
+            <div className="card w-full mx-10 my-5 card-compact rounded-md bg-[#eeece7] md:grid grid-cols-3">
+                <figure className="md:w-1/2 mx-auto py-5 w-3/4 col-span-1">
                     <img
                     src={company_logo}
                     alt={company_name} />
