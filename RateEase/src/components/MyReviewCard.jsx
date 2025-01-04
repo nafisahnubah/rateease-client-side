@@ -47,8 +47,8 @@ const MyReviewCard = ({reviewObj, reviews, setReviews}) => {
 
     return (
         <div>
-            <div className="card w-full mx-10 my-5 card-compact rounded-md bg-[#eeece7] md:grid grid-cols-3">
-                <figure className="md:w-1/2 mx-auto py-5 w-3/4 col-span-1">
+            <div className="card md:w-full max-w-full mx-10 my-5 card-compact rounded-md bg-[#eeece7] md:grid grid-cols-3">
+                <figure className="w-1/2 mx-auto py-5 col-span-1">
                     <img
                     src={company_logo}
                     alt={company_name} />
@@ -63,7 +63,7 @@ const MyReviewCard = ({reviewObj, reviews, setReviews}) => {
                     </div>
                     <h3 className="text-2xl">{review}</h3>
                 </div>
-                <div className="flex gap-8 justify-center items-center">
+                <div className="flex gap-8 md:mb-0 mb-10 justify-start md:mx-0 mx-5 md:justify-center items-center">
                     <button onClick={() => handleDelete(_id)} className="btn rounded-3xl bg-[#EDA735] border-none hover:bg-white text-xl"><MdDelete/></button>
                     <Link to={`/my-reviews/${_id}`} className="btn rounded-3xl bg-[#EDA735] border-none hover:bg-white text-xl"><FaEdit/></Link>
                 </div>

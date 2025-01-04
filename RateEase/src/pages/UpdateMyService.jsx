@@ -66,52 +66,52 @@ const UpdateMyService = () => {
                     <h1 className="font-semibold text-4xl text-center">Update Service</h1>
                 </div>
 
-                <div className="form-control">
+                <div className="w-full">
                     <label className="label">
                         <span className="label-text text-lg">Company Name</span>
                     </label>
-                    <input name="company_name" type="text" defaultValue={company_name} placeholder="Company Name" className="input input-bordered" required />
+                    <input name="company_name" type="text" defaultValue={company_name} placeholder="Company Name" className="w-full input input-bordered" required />
                 </div>
 
-                <div className="form-control">
+                <div className="w-full">
                     <label className="label">
                         <span className="label-text text-lg">Logo URL</span>
                     </label>
-                    <input name="company_logo" type="url" defaultValue={company_logo} placeholder="Logo URL" className="input input-bordered" required />
+                    <input name="company_logo" type="url" defaultValue={company_logo} placeholder="Logo URL" className="w-full input input-bordered" required />
                 </div>
 
-                <div className="form-control">
+                <div className="w-full">
                     <label className="label">
                         <span className="label-text text-lg">Website</span>
                     </label>
-                    <input name="website" type="text" defaultValue={website} placeholder="Website" className="input input-bordered" required />
+                    <input name="website" type="text" defaultValue={website} placeholder="Website" className="w-full input input-bordered" required />
                 </div>
 
-                <div className="flex gap-4">
-                    <div className="form-control w-full">
+                <div className="md:flex gap-4">
+                    <div className="w-full">
                         <label className="label">
                             <span className="label-text text-lg">Service Name</span>
                         </label>
-                        <input name="service_name" type="text" defaultValue={service_name} placeholder="Service Name" className="input input-bordered" required />
+                        <input name="service_name" type="text" defaultValue={service_name} placeholder="Service Name" className="w-full input input-bordered" required />
                     </div>
 
-                    <div className="form-control w-full">
+                    <div className="w-full">
                         <label className="label">
                             <span className="label-text text-lg">Service Category</span>
                         </label>
-                        <input name="service_category" type="text" defaultValue={service_category} placeholder="Service Category" className="input input-bordered" required />
+                        <input name="service_category" type="text" defaultValue={service_category} placeholder="Service Category" className="w-full input input-bordered" required />
                     </div>
                 </div>
                 
-                <div className="form-control">
+                <div className="w-full">
                     <label className="label">
                         <span className="label-text text-lg">Description</span>
                     </label>
-                    <textarea name="service_description" className="textarea textarea-bordered" rows={6} defaultValue={service_description} placeholder="Description"></textarea>
+                    <textarea name="service_description" className="w-full textarea textarea-bordered" rows={6} defaultValue={service_description} placeholder="Description"></textarea>
                 </div>
 
-                <div className="form-control mt-6">
-                    <button className="btn text-lg bg-[#EDA735] hover:bg-white border-none">Update Service</button>
+                <div className="w-full mt-6">
+                    <button className="btn w-full text-lg bg-[#EDA735] hover:bg-white border-none">Update Service</button>
                 </div>
                 <ToastContainer
                     position="top-center"

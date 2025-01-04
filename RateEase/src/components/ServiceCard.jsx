@@ -5,8 +5,8 @@ const ServiceCard = ({service}) => {
     const {_id, company_logo, company_name, service_name, service_category} = service;
 
     return (
-        <div className="mx-auto">
-            <div className="card card-compact rounded-md bg-[#eeece7] h-5/6 w-96">
+        <div className="mx-auto md:my-0 my-10">
+            <div className="card card-compact mx-auto rounded-md bg-[#eeece7] h-5/6 w-96">
                 <figure>
                     <img
                     src={company_logo}

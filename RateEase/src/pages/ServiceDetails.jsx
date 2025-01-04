@@ -78,7 +78,7 @@ const ServiceDetails = () => {
                             src={company_logo}
                             alt={company_name} />
                         </figure>
-                        <div className="card-body">
+                        <div className="card-body gap-2">
                             <h2 className="text-3xl">{company_name}</h2>
                             <h3 className="text-2xl">{service_name}</h3>
                             <div className="badge badge-outline">{service_category}</div>
