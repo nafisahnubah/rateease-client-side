@@ -31,7 +31,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Services></Services>
+        element: <Services></Services>,
+        loader: () => fetch('https://rate-ease-server-side.vercel.app/servicesCount')
       },
       {
         path: "/services/:id",
