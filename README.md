@@ -18,6 +18,7 @@ RateEase is a platform that allows users to review and interact with services li
 - **Explore Reviews**: View reviews for services listed on the platform.
 - **Pagination**: Select the number of services to be shown on the page and navigate between different pages.
 - **Notifications**: Receive notifications for actions like successful login, posting a review, etc.
+- **Responsive Desgin**: Responsive design to support use on all types of devices.
 
 ## Tech Stack
 - **React**
