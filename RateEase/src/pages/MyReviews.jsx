@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useAuth from "../hooks/useAuth";
 import { useState } from "react";
 import MyReviewCard from "../components/MyReviewCard";
+import NoContent from "../components/NoContent";
 
 const MyReviews = () => {
 
@@ -18,6 +19,9 @@ const MyReviews = () => {
         <div className="pb-5 mx-auto">
             <h1 className="font-semibold text-4xl text-center my-10">My Reviews</h1>
             <div className="gap-8 mb-4 mx-auto md:px-24">
+                {
+                    reviews.length > 0 ? '' : <NoContent></NoContent>
+                }
                 {
                     reviews.map(reviewObj => <MyReviewCard key={reviewObj._id} reviews={reviews} setReviews={setReviews} reviewObj={reviewObj}></MyReviewCard>)
                 }

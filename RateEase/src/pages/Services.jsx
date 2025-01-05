@@ -3,6 +3,7 @@ import { useState } from "react";
 import ServiceCard from "../components/ServiceCard";
 import { useLoaderData } from "react-router-dom";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import NoContent from "../components/NoContent";
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -44,7 +45,12 @@ const Services = () => {
                 <h2 className="text-5xl text-center my-10">All Services</h2>
                 <p></p>
             </div>
-            <div className="md:grid grid-cols-3 gap-7 mb-4 md:px-24">
+            <div className="mx-auto mb-4 md:px-24">
+                {
+                    services.length > 0 ? '' : <NoContent></NoContent>
+                }
+            </div>
+            <div className="md:grid mx-auto grid-cols-3 gap-7 mb-4 md:px-24">
                 {
                     services.map( service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }

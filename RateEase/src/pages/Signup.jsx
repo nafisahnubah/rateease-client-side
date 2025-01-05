@@ -1,15 +1,16 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import welcomeAnimation from "../assets/lottie-animations/login-signup.json";
 import { useContext, useState } from "react";
 import AuthContext from "../context/AuthContext";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { sendEmailVerification } from "firebase/auth";
+import auth from "../firebase/firebase.init";
 
 const Signup = () => {
 
-    const { signupUser } = useContext(AuthContext);
+    const { signupUser, logoutUser } = useContext(AuthContext);
     const [error, setError] = useState(null);
-    const navigate = useNavigate();
 
     const handleSignup = e => {
         e.preventDefault();
@@ -39,26 +40,42 @@ const Signup = () => {
             const user = userCredential.user;
             console.log(user.email);
             setError(null);
-            toast.success('Account created successfully!', {
-                position: "top-center",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                transition: Bounce,
+            sendEmailVerification(auth.currentUser)
+                .then(() => {
+                    toast.success('Verification email sent! Please verify your email to create your account.', {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                        transition: Bounce,
+                    });
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setError(errorCode, ": ", errorMessage);
+                });
+        })
+        .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorCode, ": ", errorMessage);
+        });
+
+        setTimeout(() => {
+            logoutUser()
+            .then(() => {
+                
+            }).catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                setError(errorCode, ": ", errorMessage);
             });
-            setTimeout(() => {
-                navigate('/');
-            }, 1500);
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            setError(errorCode, ": ", errorMessage);
-          });
+        }, 1000);
         
     }
 
@@ -96,7 +113,7 @@ const Signup = () => {
                     <button className="btn text-lg bg-[#EDA735] hover:bg-white border-none">Signup</button>
                     <ToastContainer
                         position="top-center"
-                        autoClose={1000}
+                        autoClose={2000}
                         hideProgressBar={false}
                         newestOnTop={false}
                         closeOnClick={false}

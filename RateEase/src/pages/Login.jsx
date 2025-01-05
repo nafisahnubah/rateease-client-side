@@ -25,20 +25,26 @@ const Login = () => {
             const user = userCredential.user;
             console.log(user.email);
             setError(null);
-            toast.success('Logged in successfully!', {
-                position: "top-center",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                transition: Bounce,
-            });
-            setTimeout(() => {
-                navigate(from);
-            }, 1500);
+
+            if(!userCredential.user.emailVerified){
+                setError("Please verify your email address.");
+            }
+            else{
+                toast.success('Logged in successfully!', {
+                    position: "top-center",
+                    autoClose: 1000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                    transition: Bounce,
+                });
+                setTimeout(() => {
+                    navigate(from);
+                }, 1500);
+            }
           })
           .catch((error) => {
             const errorCode = error.code;
