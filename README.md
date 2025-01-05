@@ -11,9 +11,9 @@ RateEase is a platform that allows users to review and interact with services li
 - [Author](#author)
 
 ## Features
-- **User Authentication**: Users can log in and sign up to access the platform.
+- **User Authentication**: Users can log in and sign up (with email verification through a link) to access the platform.
 - **Service Listings**: Users can browse and review various services.
-- **Add and Edit Services**: Users can add new services and manage their reviews.
+- **Add and Edit Services**: Users can add new services and update or delete their existing services.
 - **Review Management**: Users can update and delete reviews.
 - **Explore Reviews**: View reviews for services listed on the platform.
 - **Pagination**: Select the number of services to be shown on the page and navigate between different pages.
