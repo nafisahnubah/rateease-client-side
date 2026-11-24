@@ -2,6 +2,8 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { API_BASE_URL } from "../api";
+import PropTypes from "prop-types";
 
 const MyServiceCard = ({service, services, setServices}) => {
 
@@ -18,7 +20,7 @@ const MyServiceCard = ({service, services, setServices}) => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://rate-ease-server-side.vercel.app/my-services/${_id}`, {
+                fetch(`${API_BASE_URL}/my-services/${_id}`, {
                     method: 'DELETE'
                 })
                 .then(res => res.json())
@@ -60,6 +62,18 @@ const MyServiceCard = ({service, services, setServices}) => {
             </div>
         </div>
     );
+};
+
+MyServiceCard.propTypes = {
+    service: PropTypes.shape({
+        _id: PropTypes.string,
+        company_logo: PropTypes.string,
+        company_name: PropTypes.string,
+        service_name: PropTypes.string,
+        service_category: PropTypes.string,
+    }).isRequired,
+    services: PropTypes.arrayOf(PropTypes.object).isRequired,
+    setServices: PropTypes.func.isRequired,
 };
 
 export default MyServiceCard;

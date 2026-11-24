@@ -1,6 +1,7 @@
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../api";
 
 const AddService = () => {
 
@@ -28,7 +29,7 @@ const AddService = () => {
             user_email
         }
 
-        fetch('https://rate-ease-server-side.vercel.app/add-service', {
+        fetch(`${API_BASE_URL}/add-service`, {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

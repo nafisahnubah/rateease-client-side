@@ -1,5 +1,6 @@
 import { CgProfile } from "react-icons/cg";
 import { CiStar } from "react-icons/ci";
+import PropTypes from "prop-types";
 
 const ReviewCard = ({elem}) => {
     const {rating, review, email} = elem;
@@ -30,6 +31,14 @@ const ReviewCard = ({elem}) => {
             </div>
         </div>
     );
+};
+
+ReviewCard.propTypes = {
+    elem: PropTypes.shape({
+        rating: PropTypes.number,
+        review: PropTypes.string,
+        email: PropTypes.string,
+    }).isRequired,
 };
 
 export default ReviewCard;

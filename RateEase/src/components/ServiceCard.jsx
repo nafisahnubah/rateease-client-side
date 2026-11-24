@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ServiceCard = ({service}) => {
 
@@ -23,6 +24,16 @@ const ServiceCard = ({service}) => {
             </div>
         </div>
     );
+};
+
+ServiceCard.propTypes = {
+    service: PropTypes.shape({
+        _id: PropTypes.string,
+        company_logo: PropTypes.string,
+        company_name: PropTypes.string,
+        service_name: PropTypes.string,
+        service_category: PropTypes.string,
+    }).isRequired,
 };
 
 export default ServiceCard;

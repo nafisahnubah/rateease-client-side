@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import MyServiceCard from "../components/MyServiceCard";
 import NoContent from "../components/NoContent";
+import { API_BASE_URL } from "../api";
 
 const MyServices = () => {
     const {user} = useAuth();
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch(`https://rate-ease-server-side.vercel.app/my-services?email=${user.email}`)
+        fetch(`${API_BASE_URL}/my-services?email=${user.email}`)
         .then(res => res.json())
         .then(data => setServices(data));
     }, [user.email])
