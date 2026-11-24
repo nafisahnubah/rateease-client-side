@@ -4,6 +4,7 @@ import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { API_BASE_URL } from "../api";
+import PropTypes from "prop-types";
 
 const MyReviewCard = ({reviewObj, reviews, setReviews}) => {
     const {_id, service_name, company_name, company_logo, rating, review} = reviewObj;
@@ -71,6 +72,19 @@ const MyReviewCard = ({reviewObj, reviews, setReviews}) => {
             </div>
         </div>
     );
+};
+
+MyReviewCard.propTypes = {
+    reviewObj: PropTypes.shape({
+        _id: PropTypes.string,
+        service_name: PropTypes.string,
+        company_name: PropTypes.string,
+        company_logo: PropTypes.string,
+        rating: PropTypes.number,
+        review: PropTypes.string,
+    }).isRequired,
+    reviews: PropTypes.arrayOf(PropTypes.object).isRequired,
+    setReviews: PropTypes.func.isRequired,
 };
 
 export default MyReviewCard;
