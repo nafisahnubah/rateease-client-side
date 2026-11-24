@@ -1,6 +1,5 @@
-import { Bounce, toast, ToastContainer } from "react-toastify";
-import useAuth from "../hooks/useAuth";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { Bounce, ToastContainer } from "react-toastify";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateMyService = () => {
