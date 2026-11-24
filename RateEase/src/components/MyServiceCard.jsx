@@ -2,6 +2,7 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { API_BASE_URL } from "../api";
 
 const MyServiceCard = ({service, services, setServices}) => {
 
@@ -18,7 +19,7 @@ const MyServiceCard = ({service, services, setServices}) => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://rate-ease-server-side.vercel.app/my-services/${_id}`, {
+                fetch(`${API_BASE_URL}/my-services/${_id}`, {
                     method: 'DELETE'
                 })
                 .then(res => res.json())

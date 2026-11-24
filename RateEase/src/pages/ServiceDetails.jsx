@@ -6,6 +6,7 @@ import useAuth from "../hooks/useAuth";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import ReviewCard from "../components/ReviewCard";
 import NoContent from "../components/NoContent";
+import { API_BASE_URL } from "../api";
 
 const ServiceDetails = () => {
     const service = useLoaderData();
@@ -19,7 +20,7 @@ const ServiceDetails = () => {
     const [rating, setRating] = useState(0);
     const [reviews, setReviews] = useState([]);
 
-    fetch(`https://rate-ease-server-side.vercel.app/reviews/${id}`)
+    fetch(`${API_BASE_URL}/reviews/${id}`)
         .then(res => res.json())
         .then(data => setReviews(data));
 
@@ -41,7 +42,7 @@ const ServiceDetails = () => {
             service_id: id
         }
 
-        fetch('https://rate-ease-server-side.vercel.app/reviews', {
+        fetch(`${API_BASE_URL}/reviews`, {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

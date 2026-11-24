@@ -1,6 +1,7 @@
 import { Bounce, ToastContainer } from "react-toastify";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { API_BASE_URL } from "../api";
 
 const UpdateMyService = () => {
 
@@ -36,7 +37,7 @@ const UpdateMyService = () => {
             confirmButtonText: "Yes, update it!"
             }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://rate-ease-server-side.vercel.app/my-services/${_id}`, {
+                fetch(`${API_BASE_URL}/my-services/${_id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type' : 'application/json'

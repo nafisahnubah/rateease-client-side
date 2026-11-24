@@ -2,6 +2,7 @@ import { Rating } from "@smastrom/react-rating";
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { API_BASE_URL } from "../api";
 
 const UpdateMyReview = () => {
     const reviewObj = useLoaderData();
@@ -33,7 +34,7 @@ const UpdateMyReview = () => {
             confirmButtonText: "Yes, update it!"
             }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://rate-ease-server-side.vercel.app/my-reviews/${_id}`, {
+                fetch(`${API_BASE_URL}/my-reviews/${_id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type' : 'application/json'

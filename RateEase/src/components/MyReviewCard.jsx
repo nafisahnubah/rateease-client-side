@@ -3,6 +3,7 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { API_BASE_URL } from "../api";
 
 const MyReviewCard = ({reviewObj, reviews, setReviews}) => {
     const {_id, service_name, company_name, company_logo, rating, review} = reviewObj;
@@ -26,7 +27,7 @@ const MyReviewCard = ({reviewObj, reviews, setReviews}) => {
             confirmButtonText: "Yes, delete it!"
             }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://rate-ease-server-side.vercel.app/my-reviews/${_id}`, {
+                fetch(`${API_BASE_URL}/my-reviews/${_id}`, {
                     method: 'DELETE'
                 })
                 .then(res => res.json())

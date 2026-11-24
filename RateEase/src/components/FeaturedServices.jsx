@@ -2,13 +2,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { Link } from "react-router-dom";
+import { API_BASE_URL } from "../api";
 
 const FeaturedServices = () => {
     
     const [services, setServices] = useState([]);
 
     useEffect( () => {
-        fetch('https://rate-ease-server-side.vercel.app/featured-services')
+        fetch(`${API_BASE_URL}/featured-services`)
         .then(res => res.json())
         .then(data => setServices(data));
     }, [])

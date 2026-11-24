@@ -4,6 +4,7 @@ import ServiceCard from "../components/ServiceCard";
 import { useLoaderData } from "react-router-dom";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import NoContent from "../components/NoContent";
+import { API_BASE_URL } from "../api";
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -34,7 +35,7 @@ const Services = () => {
     }
 
     useEffect( () => {
-        fetch(`https://rate-ease-server-side.vercel.app/services?page=${currentPage}&size=${itemsPerPage}`)
+        fetch(`${API_BASE_URL}/services?page=${currentPage}&size=${itemsPerPage}`)
         .then(res => res.json())
         .then(data => setServices(data));
     }, [currentPage, itemsPerPage])
